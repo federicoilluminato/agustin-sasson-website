@@ -1,0 +1,103 @@
+@import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'); */
+
+:root {
+  --primary-dark: #0a0a0a;
+  --secondary-dark: #1a1a1a;
+  --accent-gray: #2d2d2d;
+  --light-gray: #f5f5f5;
+  --medium-gray: #666;
+  --text-light: #e0e0e0;
+  --accent-color: #ff4757;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--medium-gray);
+  scroll-behavior: smooth;
+  background: var(--primary-dark);
+}
+
+/* Custom animations */
+@keyframes pulse {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 0.5; 
+  }
+  50% { 
+    transform: scale(1.1); 
+    opacity: 0.8; 
+  }
+}
+
+@keyframes scroll-fade {
+  0%, 100% { 
+    opacity: 0.3; 
+  }
+  50% { 
+    opacity: 1; 
+  }
+}
+
+@keyframes shine {
+  0% { 
+    transform: translateX(-100%) translateY(-100%); 
+  }
+  50% { 
+    transform: translateX(100%) translateY(100%); 
+  }
+  100% { 
+    transform: translateX(-100%) translateY(-100%); 
+  }
+}
+
+/* Additional utility classes */
+.text-shadow-lg {
+  text-shadow: 0 0 30px rgba(255,255,255,0.1);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle, rgba(255,255,255,0.01) 0%, transparent 70%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .section {
+    padding: 80px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+}
+
+/* Utility classes */
+.texture-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.01) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.grain-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter></defs><rect width="200" height="200" filter="url(%23noise)" opacity="0.03"/></svg>');
+  pointer-events: none;
+}
