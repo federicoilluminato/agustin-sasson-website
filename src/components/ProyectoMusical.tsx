@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Button from './Button';
 
 export default function ProyectoMusical() {
@@ -24,9 +25,11 @@ export default function ProyectoMusical() {
             
             {/* Logo Dis Connect */}
             <div className="w-[300px] h-[200px] rounded-[20px] relative overflow-hidden border-2 border-white/10">
-              <img 
+              <Image 
                 src="/assets/logo-disconnect.jpeg" 
                 alt="Dis Connect Logo" 
+                width={300}
+                height={200}
                 className="w-full h-full object-cover rounded-[20px]"
               />
               <div 
@@ -43,7 +46,7 @@ export default function ProyectoMusical() {
           {/* Text Section */}
           <div className="text-[clamp(1.1rem,2.5vw,1.3rem)] leading-relaxed text-[#e0e0e0] opacity-90">
             <p className="mb-6">
-              Dis Connect es un dúo formado por Agustín Sasson y Alfredo Ridolfo (TEIAO), nacido en Buenos Aires en 2022. Inspirados en la idea de "desconectar para conectar", viajan a entornos naturales para crear álbumes conceptuales con identidad propia.
+              Dis Connect es un dúo formado por Agustín Sasson y Alfredo Ridolfo (TEIAO), nacido en Buenos Aires en 2022. Inspirados en la idea de &ldquo;desconectar para conectar&rdquo;, viajan a entornos naturales para crear álbumes conceptuales con identidad propia.
             </p>
             <p className="mb-6">
               Su sonido fusiona electrónica, rock, trip hop e instrumentación real (guitarras, cuerdas, percusión, etc.). Su primer disco fue editado por el prestigioso sello de Guy J: <span className="text-[#ff4757] font-semibold">Armadillo Records</span>.
