@@ -21,18 +21,18 @@ export default function Button({
   target,
   rel
 }: ButtonProps) {
-  const baseClasses = "inline-flex items-center justify-center font-semibold transition-all duration-300 relative overflow-hidden group no-underline";
+  const baseClasses = "inline-flex items-center justify-center font-semibold transition-all duration-300 relative overflow-hidden group no-underline w-full sm:w-auto";
   
   const sizeClasses = {
-    sm: "text-sm",
+    sm: "text-xs sm:text-sm",
     md: "text-sm", 
-    lg: "text-base"
+    lg: "text-sm sm:text-base"
   };
   
   const sizeStyles = {
-    sm: { padding: '8px 12px' },
-    md: { padding: '12px 20px' },
-    lg: { padding: '12px 20px' }
+    sm: { padding: '6px 10px', '@media (min-width: 640px)': { padding: '8px 12px' } },
+    md: { padding: '10px 16px', '@media (min-width: 640px)': { padding: '12px 20px' } },
+    lg: { padding: '12px 18px', '@media (min-width: 640px)': { padding: '12px 20px' } }
   };
   
   const variantClasses = {

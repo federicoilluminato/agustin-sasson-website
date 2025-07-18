@@ -4,29 +4,29 @@ import Button from './Button';
 
 export default function Contact() {
   return (
-    <section className="min-h-screen flex items-center justify-center text-[#e0e0e0] px-10 py-24 relative">
+    <section className="min-h-screen flex items-center justify-center text-[#e0e0e0] px-4 sm:px-6 md:px-10 py-16 sm:py-20 md:py-24 relative">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: 'url(/assets/fondo-black.jpeg)' }}
       ></div>
       <div className="texture-overlay"></div>
       
-      <div className="max-w-[800px] mx-auto text-center relative z-10">
-        <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-extrabold mb-2 text-[#e0e0e0] tracking-wider">
+      <div className="max-w-[800px] mx-auto text-center relative z-10 px-4">
+        <h2 className="text-[clamp(2rem,4vw,4rem)] font-extrabold mb-8 sm:mb-12 text-[#e0e0e0] tracking-wider">
           CONTACTO
         </h2>
         
-        <div className="mb-2">
-          <div className="mb-2 font-normal">
+        <div className="mb-8 sm:mb-12">
+          <div className="mb-6 sm:mb-8 text-[clamp(1rem,2vw,1.3rem)] font-normal">
             <span className="text-[#ff4757] font-semibold">Email:</span>{' '}
             <a 
               href="mailto:agussasson@hotmail.com" 
-              className="text-[#e0e0e0] no-underline transition-colors duration-300 hover:text-[#ff4757]"
+              className="text-[#e0e0e0] no-underline transition-colors duration-300 hover:text-[#ff4757] break-all"
             >
               agussasson@hotmail.com
             </a>
           </div>
-          <div className="mb-2 font-normal">
+          <div className="mb-6 sm:mb-8 text-[clamp(1rem,2vw,1.3rem)] font-normal">
             <span className="text-[#ff4757] font-semibold">WhatsApp:</span>{' '}
             <a 
               href="https://wa.me/34603914177" 
@@ -37,7 +37,7 @@ export default function Contact() {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mt-12 sm:mt-16">
           <Button href="https://www.instagram.com/agustinsasson?igsh=MTQ4OGM3YmlkYWc4OA%3D%3D&utm_source=qr" variant="secondary" size="lg" target="_blank" rel="noopener noreferrer">
             📷 Instagram Personal
           </Button>
