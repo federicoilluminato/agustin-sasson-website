@@ -1,6 +1,9 @@
 'use client';
 
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+
 export default function Header() {
+  const { elementRef, isVisible } = useIntersectionObserver();
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a] text-[#e0e0e0] px-10 py-24">
       <div className="texture-overlay"></div>
@@ -16,7 +19,7 @@ export default function Header() {
       ></div>
       
       <div className="max-w-[1400px] w-full mx-auto relative z-10">
-        <div className="text-center relative z-10">
+        <div ref={elementRef} className={`text-center relative z-10 transition-all duration-800 ${isVisible ? 'fade-in-up' : 'opacity-0 translate-y-8'}`}>
           <h1 className="text-[clamp(3rem,8vw,6rem)] font-black mb-8 tracking-wider text-shadow-lg bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
             AGUSTÍN SASSON
           </h1>

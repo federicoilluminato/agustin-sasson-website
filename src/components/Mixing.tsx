@@ -1,10 +1,18 @@
+'use client';
+
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+
 export default function Mixing() {
+  const { elementRef, isVisible } = useIntersectionObserver();
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#f5f5f5] to-[#f0f0f0] text-[#0a0a0a] px-10 py-24">
-      <div className="max-w-[1000px] mx-auto text-center">
-        <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-extrabold mb-12 text-[#0a0a0a] tracking-wider relative">
+    <section className="min-h-screen flex items-center justify-center text-[#0a0a0a] px-10 py-24 relative">
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/assets/fondo-white.jpeg)' }}
+      ></div>
+      <div ref={elementRef} className={`max-w-[1000px] mx-auto text-center relative z-10 transition-all duration-800 ${isVisible ? 'fade-in-up' : 'opacity-0 translate-y-8'}`}>
+        <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-extrabold mb-12 text-[#0a0a0a] tracking-wider">
           MIXING
-          <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-[#ff4757]"></div>
         </h2>
         
         <p className="text-[clamp(1.1rem,2.5vw,1.3rem)] leading-relaxed text-[#666] mb-10">
